@@ -19,7 +19,7 @@ form.main-form legend{
 }
 
 form.main-form input:required{
-    border:1.25px solid red;
+    border:1.25px solid lightskyblue;
 }
 
 form.main-form input[type="submit"]{

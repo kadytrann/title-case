@@ -9,7 +9,7 @@ html {
     line-height: 1.5em;
     background-image: url("../images/background.jpg");
     background-repeat: repeat;
-    background-size: 2000px 1200px;
+    background-size: 1080px 1919px;
 }
 
 body{
@@ -18,7 +18,7 @@ body{
 
 ::selection {
     color: #000; 
-    background: #ff0;
+    background: lightpink;
 }
 
 h1 {
