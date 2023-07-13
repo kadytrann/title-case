@@ -21,17 +21,20 @@
  <body>
      <header>
      <h1 class="page-header">Title Case</h1>
+
+     <!--
         <nav class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
             <a href="#">Link</a>
             <a href="#">Link</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
+        -->
      </header>
      
    <main class="wrapper">
  
-   <!-- <h2 class="subheader">Place form code below:</h2> -->
+   <h2 class="subheader">Insert input below:</h2>
    <div id="output"></div>
     <form method="post" action="" class="main-form">
     <div>
@@ -58,13 +61,14 @@
     console.log(mySubmit);
 
     mySubmit.addEventListener("click",function(ev){
-        ev.preventDefault();
-        const myInput = document.querySelector("#input");
-        const myOutput = document.querySelector("#output");
-        myOutput.innerHTML = myInput.value;
-        
-        // alert(myInput.value);
+      ev.preventDefault();
+      const myInput = document.querySelector("#input");
+      const myOutput = document.querySelector("#output");
+      myOutput.innerHTML = myInput.value;
+
+      //alert(myInput.value);
     });
-  </script>
+
+  </script>  
  </body>
 </html>
