@@ -7,9 +7,8 @@ html {
     font-family: 'Quicksand', sans-serif;
     font-size: 0.95em;
     line-height: 1.5em;
-    /*background-image: url("../images/background.jpg");*/
-    background-repeat: repeat;
-    background-size: 1080px 1919px;
+    background-image: url("../images/background.jpg");
+    background-size: 1920px 1080px;
 }
 
 body{
@@ -18,7 +17,7 @@ body{
 
 ::selection {
     color: #000; 
-    background: lightpink;
+    background: lightblue;
 }
 
 h1 {

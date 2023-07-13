@@ -9,44 +9,40 @@
   <link rel="stylesheet" href="css/forms.css">
   <style>
     #output{
-      border-radius:5px;
-      min-height:40px;
-      border:1px solid black;
+      border-radius: 5px;
+      min-height: 40px;
+      border:1px solid lightskyblue;
       width:50%;
       margin:auto;
-      font-size: x-large;
+      font-size:x-large;
+    }
+
+    #submit{
+      border-radius: 5px;
+      border:1px solid lightskyblue;
+      background-color: lightskyblue;
+      color:white;
     }
   </style>
  </head>
  <body>
      <header>
-     <h1 class="page-header">Title Case</h1>
 
-     <!--
-        <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
-        -->
-     </header>
-     
+  <h1 class="page-header">Title Case</h1>
    <main class="wrapper">
- 
-   <h2 class="subheader">Insert input below:</h2>
-   <div id="output"></div>
+
+    <h2 class="subheader">Place form code below:</h2>
+    <div id="output"></div>
     <form method="post" action="" class="main-form">
-    <div>
-    <label for="input">Input</label><br>
-      <input type="text" name="input" id="input" placeholder="Input" required autofocus>
-    </div>
-    <div>
-      <input type="submit" id="Submit">
-    </div>
+      <div>
+        <label for="input">Input</label><br>
+        <input type="text" name="input" id="input" placeholder="Input" required autofocus>  
+      </div>
+      <div>
+        <input type="submit" id="submit">
+      </div>
 
-     </form>
-
+    </form>
     <footer>
       <p><small>&copy; 2021-<span id="this-year"></span> by 
           Kady Tran, All Rights Reserved ~ 
@@ -55,16 +51,24 @@
      </p>
     </footer>
   </main>
-  <script src="js/main.js"></script>   
+  <script src="js/main.js"></script> 
   <script>
+
+    function titleCase(str){
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+
     const mySubmit = document.querySelector("#submit");
     console.log(mySubmit);
-
+    
     mySubmit.addEventListener("click",function(ev){
       ev.preventDefault();
       const myInput = document.querySelector("#input");
       const myOutput = document.querySelector("#output");
-      myOutput.innerHTML = myInput.value;
+      let myString = myInput.value;
+      myString = titleCase(myString);
+      myOutput.innerHTML = titleCase(myInput.value);
 
       //alert(myInput.value);
     });
